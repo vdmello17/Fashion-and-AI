@@ -22,17 +22,17 @@ import os
 import gdown
 import joblib
 
-# URLs from Google Drive (replace with real ones)
-embeddings_url = "https://drive.google.com/file/d/1KSWU-6Y7_S_N-5tXUArY4nFYRCvOsOAw/view?usp=sharing"
-images_url = "https://drive.google.com/file/d/1Emphcy2LxNgHRwr2-pZxtIpBTlPj_vvV/view?usp=drive_link"
+def download_if_not_exists(url, filename):
+    if not os.path.exists(filename):
+        gdown.download(url, filename, quiet=False)
 
-# Download if not already present
-gdown.download(embeddings_url, "image_embeddings.pkl", quiet=False)
-gdown.download(images_url, "x_test_images.pkl", quiet=False)
+# Replace with your actual Google Drive IDs
+download_if_not_exists("https://drive.google.com/file/d/1KSWU-6Y7_S_N-5tXUArY4nFYRCvOsOAw/view?usp=sharing", "image_embeddings.npy")
+download_if_not_exists("https://drive.google.com/file/d/1Emphcy2LxNgHRwr2-pZxtIpBTlPj_vvV/view?usp=drive_link", "x_test_images.npy")
 
-# Load files
-image_embeddings = joblib.load("image_embeddings.pkl")
-x_test = joblib.load("x_test_images.pkl")
+# Load safely using numpy
+image_embeddings = np.load("image_embeddings.npy")
+x_test = np.load("x_test_images.npy")
 
 # --- Load Models and Data ---
 st.set_page_config(page_title="AI in Fashion", layout="wide")
