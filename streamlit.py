@@ -31,8 +31,8 @@ download_if_not_exists("https://drive.google.com/file/d/1KSWU-6Y7_S_N-5tXUArY4nF
 download_if_not_exists("https://drive.google.com/file/d/1Emphcy2LxNgHRwr2-pZxtIpBTlPj_vvV/view?usp=drive_link", "x_test_images.npy")
 
 # Load safely using numpy
-image_embeddings = np.load("image_embeddings.npy")
-x_test = np.load("x_test_images.npy")
+image_embeddings = np.load("image_embeddings.npy", allow_pickle=True)
+x_test = np.load("x_test_images.npy", allow_pickle=True)
 
 # --- Load Models and Data ---
 st.set_page_config(page_title="AI in Fashion", layout="wide")
