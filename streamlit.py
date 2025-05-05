@@ -22,7 +22,7 @@ download_if_not_exists(sentiment_model_url, "sentiment_model.pkl")
 download_if_not_exists(arima_forecast_url, "arima_forecast.csv")
 
 # --- Load models and data ---
-cnn_model = tf.keras.models.load_model("cnn_model.keras")
+cnn_model = tf.keras.models.load_model("cnn_model.keras", compile=False)
 
 import joblib
 sentiment_model = joblib.load("sentiment_model.pkl")
