@@ -11,7 +11,7 @@ st.title("👗 Fashion MNIST Recommender (Google Drive-Based)")
 # File ID from Google Drive
 FILE_ID = "YOUR_FILE_ID_HERE"
 FILE_NAME = "fashion_data.h5"
-https://drive.google.com/file/d/1pWU1Vjj0m_ZPIc0Ce_JNafBMQzkd1JcN/view?usp=sharing
+
 DOWNLOAD_URL = f"https://drive.google.com/uc?id={1pWU1Vjj0m_ZPIc0Ce_JNafBMQzkd1JcN}"
 
 # Download HDF5 file if not already present
