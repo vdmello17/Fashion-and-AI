@@ -27,8 +27,8 @@ def download_if_not_exists(url, filename):
         gdown.download(url, filename, quiet=False)
 
 # Replace with your actual Google Drive IDs
-download_if_not_exists("https://drive.google.com/file/d/1KSWU-6Y7_S_N-5tXUArY4nFYRCvOsOAw/view?usp=sharing", "image_embeddings.npy")
-download_if_not_exists("https://drive.google.com/file/d/1Emphcy2LxNgHRwr2-pZxtIpBTlPj_vvV/view?usp=drive_link", "x_test_images.npy")
+download_if_not_exists("https://drive.google.com/file/d/1W7Hb11OkeYFKSOwAfes_Gx_AmvsVmIRx/view?usp=sharing", "image_embeddings.npy")
+download_if_not_exists("https://drive.google.com/file/d/11CxIdVDfGAqMowFy8TmjeWC6O0htbLDY/view?usp=sharing", "x_test_images.npy")
 
 # Load safely using numpy
 image_embeddings = np.load("image_embeddings.npy", allow_pickle=True)
